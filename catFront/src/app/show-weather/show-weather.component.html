@@ -1,0 +1,40 @@
+<div style="margin-top: 20px">
+  <div style="margin-bottom:  20px">
+    <span>Select City:</span>
+    <span>
+    <select class="form-control select" [(ngModel)]="city" (ngModelChange)="selCity($event)">
+      <option *ngFor="let item of cities" [selected]="city === item">{{item}}</option>
+    </select>
+      </span>
+  </div>
+  <table class = "table-bordered" style="border-collapse: collapse;" *ngIf="weatherinfo">
+    <tr>
+      <td>City </td>
+      <td>
+        {{weatherinfo.city}}
+<!--        <select class="form-control" [(ngModel)]="city" (ngModelChange)="selCity($event)">-->
+<!--          <option *ngFor="let item of cities" [selected]="city === item">{{item}}</option>-->
+<!--        </select>-->
+      </td>
+
+    </tr>
+
+    <tr>
+      <td>Updated time</td>
+      <td>{{weatherinfo.strtime}}</td>
+    </tr>
+    <tr>
+      <td>Weather </td>
+      <td>{{weatherinfo.summary}}</td>
+    </tr>
+    <tr>
+      <td>Temperature</td>
+      <td>{{weatherinfo.temperature}} °C</td>
+    </tr>
+    <tr>
+      <td>Wind</td>
+      <td>{{weatherinfo.windSpeed}} km/h</td>
+    </tr>
+  </table>
+</div>
+<app-loadingview [loadingflg]="loadingViewFlg"></app-loadingview>

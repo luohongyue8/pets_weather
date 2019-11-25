@@ -1,0 +1,39 @@
+<div style="margin-top: 20px">
+  <div *ngIf="catsHolded && catsHolded.maleCats && catsHolded.maleCats.length > 0">
+    <div>
+      Male
+    </div>
+    <ul>
+      <li *ngFor="let item of catsHolded.maleCats">
+        {{item.name}}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="catsHolded && catsHolded.femaleCats && catsHolded.femaleCats.length > 0">
+    <div>
+      Female
+    </div>
+    <ul>
+      <li *ngFor="let item of catsHolded.femaleCats">
+        {{item.name}}
+      </li>
+    </ul>
+  </div>
+</div>
+<!--<div *ngIf="catsHolded && catsHolded.maleCats && catsHolded.maleCats.length > 0">-->
+<!--  <th>-->
+<!--    Male-->
+<!--  </th>-->
+<!--  <tr *ngFor="let item of catsHolded.maleCats">-->
+<!--    <td style="padding-left: 20px">{{item.name}}</td>-->
+<!--  </tr>-->
+<!--</div>-->
+<!--<div *ngIf="catsHolded && catsHolded.femaleCats && catsHolded.femaleCats.length > 0">-->
+<!--  <th>-->
+<!--    Female-->
+<!--  </th>-->
+<!--  <tr *ngFor="let item of catsHolded.femaleCats">-->
+<!--    <td style="padding-left: 20px">{{item.name}}</td>-->
+<!--  </tr>-->
+<!--</div>-->
+<app-loadingview [loadingflg]="loadingViewFlg"></app-loadingview>

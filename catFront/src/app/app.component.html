@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="mgn-20">
+  <button class="btn" (click)="showCats()">Show Cats</button>
+  <button class="btn" (click)="searchWeather()">Search Weather</button>
+  <app-show-cat *ngIf="showCatflg"></app-show-cat>
+  <app-show-weather  *ngIf="searchWeatherflg"></app-show-weather>
+  <!--<router-outlet id="maintemplate" ></router-outlet>-->
+</div>
