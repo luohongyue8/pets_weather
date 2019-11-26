@@ -2,8 +2,8 @@
   <div style="margin-bottom:  20px">
     <span>Select City:</span>
     <span>
-    <select class="form-control select" [(ngModel)]="city" (ngModelChange)="selCity($event)">
-      <option *ngFor="let item of cities" [selected]="city === item">{{item}}</option>
+    <select id="dropdown" class="form-control select" (change)="selCity($event.target.value)">
+      <option *ngFor="let item of cities" [selected]="item == city">{{item}}</option>
     </select>
       </span>
   </div>

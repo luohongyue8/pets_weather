@@ -40,13 +40,13 @@ export class ShowWeatherComponent implements OnInit {
           }
 
         } else {
-          alert ('Fail to get cities ' + this.city);
+          alert ('Can not get cities.');
           this.loadingViewFlg = false;
         }
 
       },
       error => {
-        alert ('Fail to get cities ' + this.city);
+        alert ('Fail to get cities.');
         this.loadingViewFlg = false;
       });
   }

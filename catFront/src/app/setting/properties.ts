@@ -1,3 +1,4 @@
 export const properties = {
-  serviceUrl: 'http://localhost:8080/'
+  serviceUrl: ''
+  // serviceUrl: 'http://localhost:8080/'
 }
