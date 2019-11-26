@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { Observable} from 'rxjs/index';
+import { properties} from '../setting/properties';
 
 
 @Injectable()
@@ -14,7 +15,7 @@ export class HttpService {
    */
   public formByJson<T>(url: string, params?: HttpParams): Observable<any | T> {
     return this.http
-      .post<T>(url, null, { params})
+      .post<T>(properties.serviceUrl + url, null, { params})
       .pipe(
         catchError(this.handleError)
       );
